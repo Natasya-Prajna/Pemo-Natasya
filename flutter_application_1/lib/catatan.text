@@ -1,0 +1,124 @@
+Membuat File 
+
+class HalamanHasil extends StatelessWidget {
+  final String namaAwal;
+  final String namaBelakang;
+  final String alamat;
+  final String nomor;
+
+  HalamanHasil({
+    required this.namaAwal,
+    required this.namaBelakang,
+    required this.alamat,
+    required this.nomor,
+  });
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Colors.deepOrange.shade50,
+        title: const Text("Imoets Company",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontStyle: FontStyle.italic,
+            fontSize: 30,
+            color: Colors.black
+          ),
+        ),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(40.0),
+          children: [
+              const Text('Biodata Lengkap',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                  fontSize: 20,
+                   color: Colors.black
+                ),
+              ),
+              const SizedBox(height: 7,),
+
+              Container(
+                // width: 10,
+                height: 5,
+                margin: const EdgeInsets.all(2),
+                decoration: BoxDecoration(
+                color: Colors.blue.shade100,
+          
+                borderRadius: BorderRadius.circular(10),
+                        
+                ),),
+
+              const SizedBox(height: 20,),
+
+              Text('Nama Lengkap        : $namaAwal $namaBelakang',
+                style: const TextStyle( 
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+                fontSize: 17,),
+                ),
+              Text('Alamat                      : $alamat',
+                style: const TextStyle( 
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+                fontSize: 17,),),
+              Text('Nomor Handphone : $nomor',
+                style: const TextStyle( 
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                  fontSize: 17,),
+                ),
+
+              const SizedBox(height: 40,),
+              
+                Container(
+                // width: 10,
+                height: 5,
+                margin: const EdgeInsets.all(2),
+                decoration: BoxDecoration(
+                color: Colors.blue.shade100,
+          
+                borderRadius: BorderRadius.circular(10),
+                        
+                ),),
+
+              const SizedBox(height: 20,),
+
+              const Text('(!) Silakan Lakukan Pengecekkan Kembali Biodata yang telah diisi untuk memastikan pengisian data anda telah sesuai',
+              style: TextStyle(
+                fontStyle: FontStyle.italic,
+                fontSize: 12,
+              ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ElevatedButton(
+                    child: Text('< back'),
+                    
+                    onPressed: () {
+                    Navigator.pop(context);
+                    },
+                  ),
+                  ElevatedButton(
+                    child: Text(' done >'),
+                    
+                    onPressed: () {
+                    Navigator.pop(context);
+                    },
+                  ),
+                ],
+              ),
+              
+
+      ],
+      ),
+        
+    );
+  }
+}
+message.txt
+4 KB
